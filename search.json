@@ -1,0 +1,506 @@
+[
+  {
+    "title"    : "Criando a bandeira do Brasil apenas com CSS",
+    "category" : "css",
+    "tags"     : "css, css3, and html",
+    "url"      : "/criando-a-bandeira-do-brasil-apenas-com-css",
+    "date"     : "23/1/2016"
+  },
+  {
+    "title"    : "Como incluir vídeos do youtube no seu blog Jekyll de forma fácil",
+    "category" : "jekyll",
+    "tags"     : "jekyll, youtube, and plugins",
+    "url"      : "/como-incluir-videos-do-youtube-no-jekyll",
+    "date"     : "10/1/2016"
+  },
+  {
+    "title"    : "WP-CLI: Uma interface de linha de comando para WordPress",
+    "category" : "wordpress",
+    "tags"     : "wordpress",
+    "url"      : "/wp-cli-uma-interface-de-linha-de-comando-para-wordpress",
+    "date"     : "10/1/2016"
+  },
+  {
+    "title"    : "YeoPress, iniciando projetos WordPress em segundos",
+    "category" : "wordpress",
+    "tags"     : "wordpress and yeoman",
+    "url"      : "/yo-wordpress-em-segundos",
+    "date"     : "2/1/2016"
+  },
+  {
+    "title"    : "Fazendo um sistema de busca simples no Jekyll usando AngularJS",
+    "category" : "jekyll",
+    "tags"     : "jekyll, angular, and angularjs",
+    "url"      : "/fazendo-sistema-de-busca-no-jekyll-com-angularjs",
+    "date"     : "27/12/2015"
+  },
+  {
+    "title"    : "dotX - mais um tema para Jekyll",
+    "category" : "temas-jekyll",
+    "tags"     : "temas, jekyll, and download",
+    "url"      : "/dotX-mais-um-tema-para-jekyll",
+    "date"     : "21/12/2015"
+  },
+  {
+    "title"    : "Ei front-end! Você conhece o Panda?",
+    "category" : "dicas",
+    "tags"     : "dicas",
+    "url"      : "/ei-front-end-voce-conhece-o-panda",
+    "date"     : "11/12/2015"
+  },
+  {
+    "title"    : "simplest - mais um tema para Jekyll",
+    "category" : "temas-jekyll",
+    "tags"     : "temas, jekyll, and download",
+    "url"      : "/simplest-mais-um-tema-para-jekyll",
+    "date"     : "11/12/2015"
+  },
+  {
+    "title"    : "end2end - mais um tema para Jekyll",
+    "category" : "temas-jekyll",
+    "tags"     : "temas, jekyll, and download",
+    "url"      : "/end2end-mais-um-tema-para-jekyll",
+    "date"     : "11/12/2015"
+  },
+  {
+    "title"    : "Não seja apenas um recortador de PSD!",
+    "category" : "geral",
+    "tags"     : "front-end",
+    "url"      : "/nao-seja-apenas-um-recortador-de-psd",
+    "date"     : "10/12/2015"
+  },
+  {
+    "title"    : "Mug, tema gratuito para Jekyll",
+    "category" : "temas-jekyll",
+    "tags"     : "temas, jekyll, and download",
+    "url"      : "/mug-tema-gratuito-para-jekyll",
+    "date"     : "23/11/2015"
+  },
+  {
+    "title"    : "SASS + Atomic design (parte 1)",
+    "category" : "sass",
+    "tags"     : "sass and scss",
+    "url"      : "/sass-e-atomic-design",
+    "date"     : "16/11/2015"
+  },
+  {
+    "title"    : "Lora, um tema Jekyll gratuito",
+    "category" : "temas-jekyll",
+    "tags"     : "temas, jekyll, and download",
+    "url"      : "/lora-um-tema-jekyll-free",
+    "date"     : "15/11/2015"
+  },
+  {
+    "title"    : "Usando categorias e tags no Jekyll",
+    "category" : "jekyll",
+    "tags"     : "github, github-pages, and jekyll",
+    "url"      : "/usando-categorias-e-tags-no-jekyll",
+    "date"     : "13/10/2015"
+  },
+  {
+    "title"    : "Faço front-end de graça, saiba como!",
+    "category" : "geral",
+    "tags"     : "front-end and open-source",
+    "url"      : "/faco-front-end-de-graca",
+    "date"     : "12/10/2015"
+  },
+  {
+    "title"    : "8 meses de MalaPronta e o fim.",
+    "category" : "geral",
+    "tags"     : "trabalho and geral",
+    "url"      : "/8-meses-de-malapronta",
+    "date"     : "30/9/2015"
+  },
+  {
+    "title"    : "#5 - Conhecendo o pré-processador SASS | Placeholder",
+    "category" : "sass",
+    "tags"     : "sass, css, and pre-processador",
+    "url"      : "/sass-parte-5-placeholder",
+    "date"     : "27/9/2015"
+  },
+  {
+    "title"    : "Yeoman Generator Gulp Boilerplate",
+    "category" : "gulp",
+    "tags"     : "gulp, generator, and yeoman",
+    "url"      : "/yeoman-generator-gulp-boilerplate",
+    "date"     : "27/9/2015"
+  },
+  {
+    "title"    : "Como instalar o Gulp 4",
+    "category" : "gulp",
+    "tags"     : "dicas, node, and nodejs",
+    "url"      : "/como-instalar-o-gulp-4",
+    "date"     : "26/9/2015"
+  },
+  {
+    "title"    : "Blog Wilson Luiz Prosdocimo com Jekyll",
+    "category" : "temas-jekyll",
+    "tags"     : "temas, jekyll, and blog",
+    "url"      : "/blog-wilson-luiz-prosdocimo",
+    "date"     : "13/9/2015"
+  },
+  {
+    "title"    : "Melhore o SEO do seu blog Jekyll",
+    "category" : "jekyll",
+    "tags"     : "dicas and jekyll",
+    "url"      : "/seo-jekyll",
+    "date"     : "13/9/2015"
+  },
+  {
+    "title"    : "#4 - Conhecendo o pré processador SASS | Funções",
+    "category" : "sass",
+    "tags"     : "sass, css, and pre-processador",
+    "url"      : "/sass-parte-4-funcoes",
+    "date"     : "5/9/2015"
+  },
+  {
+    "title"    : "#3 - Conhecendo o pré processador SASS | Mixins",
+    "category" : "sass",
+    "tags"     : "sass, css, and pre-processador",
+    "url"      : "/sass-parte-3-mixins",
+    "date"     : "5/9/2015"
+  },
+  {
+    "title"    : "#2 - Conhecendo o pré-processador SASS | Variáveis",
+    "category" : "sass",
+    "tags"     : "sass, css, and pre-processador",
+    "url"      : "/sass-variaveis-parte-2",
+    "date"     : "2/9/2015"
+  },
+  {
+    "title"    : "#1 - Conhecendo o pré-processador SASS | Instalação",
+    "category" : "sass",
+    "tags"     : "sass, css, and pre-processador",
+    "url"      : "/conhecendo-o-pre-processador-sass-parte-1",
+    "date"     : "1/9/2015"
+  },
+  {
+    "title"    : "Instalando NodeJS 0.12 no Ubuntu via apt-get",
+    "category" : "ubuntu",
+    "tags"     : "nodejs, node, ubuntu, and linux",
+    "url"      : "/instalando-nodejs-012-no-ubuntu-via-apt-get",
+    "date"     : "10/8/2015"
+  },
+  {
+    "title"    : "Zetsu - Um tema bacanudo para jekyll",
+    "category" : "temas-jekyll",
+    "tags"     : "temas and jekyll",
+    "url"      : "/zetsu-tema-jekyll",
+    "date"     : "8/8/2015"
+  },
+  {
+    "title"    : "WordPress MeetUp Curitiba 2015 - Eu fui!",
+    "category" : "wordpress",
+    "tags"     : "meetup and eventos",
+    "url"      : "/wordpress-meetup-curitiba-2015-eu-fui",
+    "date"     : "7/8/2015"
+  },
+  {
+    "title"    : "Meu ambiente de trabalho em 7 itens",
+    "category" : "meu-trabalho",
+    "tags"     : "dicas, ambiente, and desenvolvimento",
+    "url"      : "/meu-ambiente-de-trabalho-em-7-itens",
+    "date"     : "1/8/2015"
+  },
+  {
+    "title"    : "Usando Rake tasks para automatizar publicações Jekyll",
+    "category" : "jekyll",
+    "tags"     : "jekyll, rake, and ruby",
+    "url"      : "/rake-tasks-para-automatizar-publicacoes-jekyll",
+    "date"     : "1/8/2015"
+  },
+  {
+    "title"    : "Dividindo as tasks do Gulpfile em multiplos arquivos",
+    "category" : "gulp",
+    "tags"     : "gulp and tasks",
+    "url"      : "/dividindo-as-tasks-do-gulpfile-em-multiplos-arquivos",
+    "date"     : "31/7/2015"
+  },
+  {
+    "title"    : "Reinstalando rvm no Ubuntu 15.04",
+    "category" : "ruby and ubuntu",
+    "tags"     : "ruby, rvm, gem, linux, and ubuntu",
+    "url"      : "/error-source-scripts-rvm-ubuntu-15-04",
+    "date"     : "31/7/2015"
+  },
+  {
+    "title"    : "Trabalhando com Ajax usando jQuery no Wordpress",
+    "category" : "wordpress, jquery, and php",
+    "tags"     : "wordpress, jquery, ajax, php, and programacao",
+    "url"      : "/trabalhando-com-ajax-usando-jquery-no-wordpress",
+    "date"     : "27/7/2015"
+  },
+  {
+    "title"    : "Wordpress - plugins x functions.php",
+    "category" : "wordpress and php",
+    "tags"     : "wordpress, dicas, and php",
+    "url"      : "/wordpress-plugins-x-functions-php",
+    "date"     : "24/7/2015"
+  },
+  {
+    "title"    : "Compilado de funções úteis para seu projeto Wordpress",
+    "category" : "php and wordpress",
+    "tags"     : "php, wordpress, and funcoes",
+    "url"      : "/compilado-de-funcoes-uteis-para-seu-projeto-wordpress",
+    "date"     : "23/7/2015"
+  },
+  {
+    "title"    : "Por que resolvi criar meu blog com o Jekyll",
+    "category" : "jekyll",
+    "tags"     : "jekyll and wordpress",
+    "url"      : "/por-que-resolvi-criar-meu-blog-com-o-jekyll",
+    "date"     : "21/7/2015"
+  },
+  {
+    "title"    : "Comprimindo o HTML do seu blog no Jekyll",
+    "category" : "jekyll and html",
+    "tags"     : "jekyll and html",
+    "url"      : "/comprimindo-o-html-do-seu-blog-no-jekyll",
+    "date"     : "20/7/2015"
+  },
+  {
+    "title"    : "Como definir URLs curtas no Jekyll",
+    "category" : "jekyll",
+    "tags"     : "jekyll",
+    "url"      : "/urls-curtas-no-jekyll",
+    "date"     : "20/7/2015"
+  },
+  {
+    "title"    : "Adicionando Disqus ao seu projeto Jekyll",
+    "category" : "jekyll",
+    "tags"     : "jekyll, disqus, dicas, and html",
+    "url"      : "/adicionando-disqus-ao-seu-projeto-jekyll/",
+    "date"     : "19/7/2015"
+  },
+  {
+    "title"    : "Twitter feed com jQuery e PHP (api 1.1)",
+    "category" : "php and jquery",
+    "tags"     : "api, html, jquery, php, and twitter",
+    "url"      : "/twitter-feed-com-jquery-e-php-api-1-1/",
+    "date"     : "29/7/2014"
+  },
+  {
+    "title"    : "Criando formulário de contato para Wordpress com Odin Framework",
+    "category" : "wordpress",
+    "tags"     : "iniciantes, odin, php, and wordpress",
+    "url"      : "/criando-formulario-de-contato-para-wordpress-com-odin-framework/",
+    "date"     : "13/7/2014"
+  },
+  {
+    "title"    : "Porque preciso saber PHP para criar um site com Wordpress?",
+    "category" : "wordpress",
+    "tags"     : "iniciantes, php, and wordpress",
+    "url"      : "/porque-preciso-saber-php-para-criar-um-site-com-wordpress/",
+    "date"     : "14/2/2014"
+  },
+  {
+    "title"    : "Desenvolvendo um site Profissional e Completo - Aula 6",
+    "category" : "videos",
+    "tags"     : "css, dicas, html5, programacao, and video",
+    "url"      : "/desenvolvendo-um-site-profissional-e-completo-aula-6-boxes-servicos/",
+    "date"     : "28/1/2013"
+  },
+  {
+    "title"    : "Aula de CSS - templates (parte 4)",
+    "category" : "videos",
+    "tags"     : "css, dicas, front-end, tutorial, and video",
+    "url"      : "/aula-de-css-templates-parte-4/",
+    "date"     : "12/1/2013"
+  },
+  {
+    "title"    : "Aula de CSS - templates (parte 3)",
+    "category" : "videos",
+    "tags"     : "css, dicas, html, tutorial, and video",
+    "url"      : "/aula-de-css-templates-parte-3/",
+    "date"     : "12/1/2013"
+  },
+  {
+    "title"    : "Aula de CSS – templates (parte 2)",
+    "category" : "videos",
+    "tags"     : "css, dicas, html, tutorial, and video",
+    "url"      : "/aula-de-css-templates-parte-2/",
+    "date"     : "12/1/2013"
+  },
+  {
+    "title"    : "Aula de CSS - templates (parte 1)",
+    "category" : "videos",
+    "tags"     : "css, dicas, tutorial, and video",
+    "url"      : "/aula-de-css-templates-parte-1/",
+    "date"     : "12/1/2013"
+  },
+  {
+    "title"    : "Aula de PHP - Organizando o projeto (parte 2)",
+    "category" : "videos",
+    "tags"     : "php, projeto, and organizando",
+    "url"      : "/aula-de-php-organizando-o-projeto-parte-2/",
+    "date"     : "12/1/2013"
+  },
+  {
+    "title"    : "Aula de PHP - Organizando o projeto (parte 1)",
+    "category" : "videos",
+    "tags"     : "php, projeto, and programacao",
+    "url"      : "/aula-de-php-organizando-o-projeto-parte-1/",
+    "date"     : "12/1/2013"
+  },
+  {
+    "title"    : "Trabalhando com arquivos .zip no PHP",
+    "category" : "php",
+    "tags"     : "arquivos, zip, dicas, php, programacao, and tutorial",
+    "url"      : "/trabalhando-com-arquivos-zip-no-php/",
+    "date"     : "10/1/2013"
+  },
+  {
+    "title"    : "Fazer encurtador de url com PHP e migre.me (atualizado)",
+    "category" : "html",
+    "tags"     : "dicas, html, php, programacao, and twitter",
+    "url"      : "/fazer-encurtador-de-url-com-php-e-migre-me/",
+    "date"     : "22/12/2012"
+  },
+  {
+    "title"    : "Como usar um Grid de 12 colunas para Photoshop",
+    "category" : "videos",
+    "tags"     : "design, dicas, photoshop, psd, tutorial, videos, and youtube",
+    "url"      : "/como-usar-um-grid-de-12-colunas-para-photoshop/",
+    "date"     : "20/7/2012"
+  },
+  {
+    "title"    : "Wordpress - Aula 1: Explicação e Instalação",
+    "category" : "videos",
+    "tags"     : "php, programacao, tutorial, videos, wordpress, and youtube",
+    "url"      : "/wordpress-aula-1-explicacao-e-instalacao/",
+    "date"     : "18/7/2012"
+  },
+  {
+    "title"    : "GitHub no Windows sem nenhuma linha de comando",
+    "category" : "github",
+    "tags"     : "videos",
+    "url"      : "/github-no-windows-sem-nenhuma-linha-de-comando/",
+    "date"     : "7/7/2012"
+  },
+  {
+    "title"    : "Desenvolvendo um site Profissional e Completo - Parte 3",
+    "category" : "videos",
+    "tags"     : "css, css3, html, html5, javascript, programacao, videos, and youtube",
+    "url"      : "/desenvolvendo-um-site-profissional-e-completo-parte-3/",
+    "date"     : "6/7/2012"
+  },
+  {
+    "title"    : "Desenvolvendo um site Profissional e Completo - Parte 2",
+    "category" : "videos",
+    "tags"     : "css, css3, html, html5, jquery, programacao, videos, and youtube",
+    "url"      : "/desenvolvendo-um-site-profissional-e-completo-parte-2/",
+    "date"     : "6/7/2012"
+  },
+  {
+    "title"    : "Desenvolvendo um site Profissional e Completo - Parte 1",
+    "category" : "videos",
+    "tags"     : "css, html, javascript, jquery, photoshop, programacao, videos, and youtube",
+    "url"      : "/desenvolvendo-um-site-profissional-e-completo-parte-1/",
+    "date"     : "15/4/2012"
+  },
+  {
+    "title"    : "Instalação e configuração do WAMP5",
+    "category" : "videos",
+    "tags"     : "php, programacao, tutorial, videos, and youtube",
+    "url"      : "/instalacao-e-configuracao-do-wamp5/",
+    "date"     : "15/4/2012"
+  },
+  {
+    "title"    : "Trabalhando com Array no PHP",
+    "category" : "php",
+    "tags"     : "dicas, php, programacao, and tutorial",
+    "url"      : "/trabalhando-com-array-no-php/",
+    "date"     : "5/4/2012"
+  },
+  {
+    "title"    : "Diferença entre aspas duplas e aspas simples no PHP",
+    "category" : "php",
+    "tags"     : "dicas, php, and programacao",
+    "url"      : "/diferenca-entre-aspas-duplas-e-aspas-simples-no-php/",
+    "date"     : "3/4/2012"
+  },
+  {
+    "title"    : "Diferença entre require(), require_once(), include, include_once()",
+    "category" : "php",
+    "tags"     : "dicas, php, programacao, and tutorial",
+    "url"      : "/diferenca-entre-require-require_once-include-include_once/",
+    "date"     : "3/4/2012"
+  },
+  {
+    "title"    : "Canvas com HTML 5",
+    "category" : "html",
+    "tags"     : "canvas, html5, javascript, and tutorial",
+    "url"      : "/canvas-com-html-5/",
+    "date"     : "30/1/2012"
+  },
+  {
+    "title"    : "Download de 50 apostilas para programadores e designers",
+    "category" : "downloads",
+    "tags"     : "apostilas, dicas, download, and free",
+    "url"      : "/download-de-50-apostilas-para-programadores-e-designers/",
+    "date"     : "10/11/2011"
+  },
+  {
+    "title"    : "HTML5: Estrutura básica",
+    "category" : "html",
+    "tags"     : "dicas, html, and html5",
+    "url"      : "/html5-estrutura-basica/",
+    "date"     : "3/11/2011"
+  },
+  {
+    "title"    : "10 dicas de otimização em programação PHP",
+    "category" : "php",
+    "tags"     : "dicas, php, and programacao",
+    "url"      : "/10-dicas-de-otimizacao-em-programacao-php/",
+    "date"     : "3/11/2011"
+  },
+  {
+    "title"    : "Como fazer Accordion Simples com jQuery em 5 linhas de código",
+    "category" : "css",
+    "tags"     : "css, dicas, html, and jquery",
+    "url"      : "/como-fazer-accordion-simples-com-jquery-em-5-linhas-de-codigo/",
+    "date"     : "3/11/2011"
+  },
+  {
+    "title"    : "Formatando números com a função number_format()",
+    "category" : "php",
+    "tags"     : "dicas, php, and programacao",
+    "url"      : "/formatando-numeros-com-a-funcao-number_format/",
+    "date"     : "3/11/2011"
+  },
+  {
+    "title"    : "Forçando download com PHP",
+    "category" : "php",
+    "tags"     : "dicas, php, and programacao",
+    "url"      : "/forcando-download-com-php/",
+    "date"     : "3/11/2011"
+  },
+  {
+    "title"    : "Find Icons - Buscador de ícones",
+    "category" : "dicas",
+    "tags"     : "design, dicas, find, and icons",
+    "url"      : "/find-icons-buscador-de-icones/",
+    "date"     : "3/11/2011"
+  },
+  {
+    "title"    : "Evitando conflito com bibliotecas com jQuery.noConflict",
+    "category" : "jquery",
+    "tags"     : "dicas, jquery, and programacao",
+    "url"      : "/evitando-conflito-com-bibliotecas-com-jquery-noconflict/",
+    "date"     : "3/11/2011"
+  },
+  {
+    "title"    : "Download de temas profissionais gratuitos para Wordpress",
+    "category" : "downloads",
+    "tags"     : "dicas and wordpress",
+    "url"      : "/download-de-temas-profissionais-gratuitos-para-wordpress/",
+    "date"     : "3/11/2011"
+  },
+  {
+    "title"    : "Verificar arquivos e pastas com PHP",
+    "category" : "php",
+    "tags"     : "dicas, php, and programacao",
+    "url"      : "/verificar-arquivos-e-pastas-com-php/",
+    "date"     : "3/11/2011"
+  }
+]

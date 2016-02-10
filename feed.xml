@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fernando Moreira • Desenvolvedor web e Front-end</title>
+    <description>Desenvolvedor Front-end, Design Responsivo, HTML5, CSS3 e JavaScript</description>
+    <link>http://nandomoreira.me/</link>
+    <atom:link href="http://nandomoreira.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 10 Feb 2016 13:57:19 +0000</pubDate>
+    <lastBuildDate>Wed, 10 Feb 2016 13:57:19 +0000</lastBuildDate>
+    <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Criando a bandeira do Brasil apenas com CSS</title>
+        <description>&lt;p&gt;Olá terráqueo, como vai?&lt;/p&gt; &lt;p&gt;Recentemente eu contribui com um projeto chamado &lt;a href=&quot;https://github.com/pattle/Flags-in-CSS&quot;&gt;Flags-in-CSS&lt;/a&gt; enviando a bandeira do Brasil &lt;a href=&quot;http://pattle.github.io/Flags-in-CSS/&quot;&gt;pra coleção&lt;/a&gt;.&lt;/p&gt; &lt;p&gt;Eu vou demonstrar nesse artigo como eu criei ela usando apenas com &lt;abbr title=&quot;Cascading Style Sheets&quot;&gt;CSS&lt;/abbr&gt;&lt;/p&gt; &lt;h2 id=&quot;o-retngulo-verde&quot;&gt;O Retângulo verde&lt;/h2&gt; &lt;p&gt;Isso é muito simples. Primeiro criei uma &lt;code&gt;div&lt;/code&gt; com a classe &lt;code&gt;.brasil-flag&lt;/code&gt;, por enquanto vazia.&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;brasil-flag&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- empty --&amp;gt;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;E no CSS eu apliquei o seguinte código:&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-scss&quot; data-lang=&quot;scss&quot;&gt;&lt;span class=&quot;nc&quot;&gt;.brasil-flag&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;position&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;relative&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;background-color&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;mh&quot;&gt;#16b83e&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width&lt;/span&gt;&lt;span...</description>
+        <pubDate>Sat, 23 Jan 2016 17:57:01 +0000</pubDate>
+        <link>http://nandomoreira.me/criando-a-bandeira-do-brasil-apenas-com-css</link>
+        <guid isPermaLink="true">http://nandomoreira.me/criando-a-bandeira-do-brasil-apenas-com-css</guid>
+        
+        <category>css</category>
+        
+        <category>css3</category>
+        
+        <category>html</category>
+        
+        
+        <category>css</category>
+        
+      </item>
+    
+      <item>
+        <title>Como incluir vídeos do youtube no seu blog Jekyll de forma fácil</title>
+        <description>&lt;p&gt;Criar plugins para &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt; é bem simples e fácil, basta criar seu arquivo &lt;code&gt;.rb&lt;/code&gt; dentro do diretório &lt;code&gt;_plugins&lt;/code&gt;.&lt;/p&gt; &lt;p&gt;Hoje vamos &lt;a href=&quot;https://gist.github.com/joelverhagen/1805814&quot;&gt;usar um plugin&lt;/a&gt; bem bacana para incluir vídeos do &lt;a href=&quot;https://www.youtube.com/&quot;&gt;Youtube&lt;/a&gt; no seu blog Jekyll sem precisar copiar e colar o iframe do youtube, apenas usando o &lt;code&gt;ID&lt;/code&gt; do vídeo.&lt;/p&gt; &lt;h3 id=&quot;o-arquivo-youtuberb&quot;&gt;O arquivo youtube.rb&lt;/h3&gt; &lt;p&gt;Crie um arquivo chamado &lt;code&gt;youtube.rb&lt;/code&gt; dentro do diretório &lt;code&gt;_plugins&lt;/code&gt; e coloque o código abaixo:&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;YouTube&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Liquid&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Tag&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Syntax&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/^\s*([^\s]+)(\s+(\d+)\s+(\d+)\s*)?/&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tagName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;markup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span...</description>
+        <pubDate>Sun, 10 Jan 2016 17:03:59 +0000</pubDate>
+        <link>http://nandomoreira.me/como-incluir-videos-do-youtube-no-jekyll</link>
+        <guid isPermaLink="true">http://nandomoreira.me/como-incluir-videos-do-youtube-no-jekyll</guid>
+        
+        <category>jekyll</category>
+        
+        <category>youtube</category>
+        
+        <category>plugins</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>WP-CLI: Uma interface de linha de comando para WordPress</title>
+        <description>&lt;p&gt;Nesse artigo vou mostrar como instalar a &lt;a href=&quot;http://wp-cli.org/&quot;&gt;WP-CLI&lt;/a&gt;, uma interface de linha de comando para WordPress.&lt;/p&gt; &lt;p&gt;&lt;strong&gt;WP-CLI&lt;/strong&gt; significa &lt;em&gt;WordPress Command Line Interface&lt;/em&gt; traduzindo para o português &lt;em&gt;interface de linha de comando&lt;/em&gt;.&lt;/p&gt; &lt;p&gt;A instalação é bem simples, basta que você tenha o &lt;abbr title=&quot;PHP: Hypertext Preprocessor&quot;&gt;PHP&lt;/abbr&gt; instalado em sua máquina.&lt;/p&gt; &lt;hr /&gt; &lt;h2 id=&quot;instalando-e-atualizando&quot;&gt;Instalando (e atualizando)&lt;/h2&gt; &lt;p&gt;Primeiro, faça o download &lt;a href=&quot;https://raw.github.com/wp-cli/builds/gh-pages/phar/wp-cli.phar&quot;&gt;wp-cli.phar&lt;/a&gt; usando &lt;code&gt;wget&lt;/code&gt; ou &lt;code&gt;curl&lt;/code&gt;. Por exemplo:&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;Em seguida, verifique se ele funciona:&lt;/p&gt; &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;php wp-cli.phar --info&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;p&gt;Para ser capaz de escrever apenas &lt;code&gt;wp&lt;/code&gt; no seu terminal, em vez de &lt;code&gt;php...</description>
+        <pubDate>Sun, 10 Jan 2016 15:33:20 +0000</pubDate>
+        <link>http://nandomoreira.me/wp-cli-uma-interface-de-linha-de-comando-para-wordpress</link>
+        <guid isPermaLink="true">http://nandomoreira.me/wp-cli-uma-interface-de-linha-de-comando-para-wordpress</guid>
+        
+        <category>wordpress</category>
+        
+        
+        <category>wordpress</category>
+        
+      </item>
+    
+      <item>
+        <title>YeoPress, iniciando projetos WordPress em segundos</title>
+        <description>&lt;p&gt;Esse é o meu primeiro artigo do ano de &lt;strong&gt;2016&lt;/strong&gt;, então eu vou falar sobre &lt;strong&gt;&lt;a href=&quot;http://yeoman.io/&quot;&gt;Yeoman&lt;/a&gt;&lt;/strong&gt; e o &lt;abbr title=&quot;Content Management System&quot;&gt;CMS&lt;/abbr&gt; mais usado do mundo, o &lt;strong&gt;&lt;a href=&quot;https://wordpress.org/&quot;&gt;WordPress&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt; &lt;h2 id=&quot;o-que--yeoman&quot;&gt;O que é Yeoman?&lt;/h2&gt; &lt;blockquote&gt; &lt;p&gt;Yeoman helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. &lt;small&gt;&lt;a href=&quot;http://yeoman.io/&quot;&gt;yeoman.io&lt;/a&gt;&lt;/small&gt;&lt;/p&gt; &lt;/blockquote&gt; &lt;blockquote&gt; &lt;p&gt;&lt;em&gt;Traduzindo:&lt;/em&gt; Yeoman ajuda a iniciar novos projetos, a prescrição de melhores práticas e ferramentas para ajudá-lo a manter-se produtivo. &lt;small&gt;&lt;a href=&quot;https://goo.gl/d9zH8D&quot;&gt;Google translate&lt;/a&gt; :D&lt;/small&gt;&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;E para isso existe os &lt;em&gt;Generators&lt;/em&gt;, são basicamente pacotes &lt;abbr title=&quot;node package manager&quot;&gt;npm&lt;/abbr&gt; feitos para Yeoman e que através...</description>
+        <pubDate>Sat, 02 Jan 2016 18:34:18 +0000</pubDate>
+        <link>http://nandomoreira.me/yo-wordpress-em-segundos</link>
+        <guid isPermaLink="true">http://nandomoreira.me/yo-wordpress-em-segundos</guid>
+        
+        <category>wordpress</category>
+        
+        <category>yeoman</category>
+        
+        
+        <category>wordpress</category>
+        
+      </item>
+    
+      <item>
+        <title>Fazendo um sistema de busca simples no Jekyll usando AngularJS</title>
+        <description>&lt;p&gt;Por alguns meses eu usei o plugin &lt;a href=&quot;https://github.com/christian-fei/Simple-Jekyll-Search&quot;&gt;Simple Jekyll Search&lt;/a&gt; que funcionou muito bem no meu blog, mas agora ele foi totalmente feito em angular e ficou uma maravilha.&lt;/p&gt; &lt;p&gt;Hoje vou mostrar aqui como foi eu criei essa façanha, é bem simples e sem segredo nenhum, vem comigo.&lt;/p&gt; &lt;h2 id=&quot;primeiro-obstculo-liquid-x-angular&quot;&gt;Primeiro obstáculo: Liquid x Angular&lt;/h2&gt; &lt;p&gt;Você deve ter notado que o Jekyll, assim como o Angular, usa 2 chaves em sua sintaxe, causando assim um conflito na hora de compilar o jekyll.&lt;/p&gt; &lt;p&gt;É bem simples resolver esse pequeno probleminha, o próprio Angular tem a solução, o &lt;a href=&quot;https://docs.angularjs.org/api/ng/provider/$interpolateProvider&quot;&gt;$interpolateProvider&lt;/a&gt; é usado...</description>
+        <pubDate>Sun, 27 Dec 2015 22:28:33 +0000</pubDate>
+        <link>http://nandomoreira.me/fazendo-sistema-de-busca-no-jekyll-com-angularjs</link>
+        <guid isPermaLink="true">http://nandomoreira.me/fazendo-sistema-de-busca-no-jekyll-com-angularjs</guid>
+        
+        <category>jekyll</category>
+        
+        <category>angular</category>
+        
+        <category>angularjs</category>
+        
+        
+        <category>jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>dotX - mais um tema para Jekyll</title>
+        <description>&lt;h2 id=&quot;como-usar&quot;&gt;Como usar&lt;/h2&gt; &lt;ol&gt; &lt;li&gt;Faça o Download ou clone o repo &lt;code&gt;git clone git@github.com:nandomoreirame/dotX.git&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Entre no diretório: &lt;code&gt;cd dotX/&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Instale as dependencias do Ruby: &lt;code&gt;bundle install&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Inicie o servidor Jekyll: &lt;code&gt;jekyll serve&lt;/code&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;Acesse, &lt;a href=&quot;http://localhost:4000/dotX&quot;&gt;localhost:4000/dotX&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;usando-rake-tasks&quot;&gt;Usando Rake tasks&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Criar nova página: &lt;code&gt;rake page name=&quot;contato.md&quot;&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Criar novo post: &lt;code&gt;rake post title=&quot;TITULO DO POST&quot;&lt;/code&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;fazendo-o-deploy-no-github&quot;&gt;Fazendo o deploy no Github&lt;/h3&gt; &lt;ol&gt; &lt;li&gt;Altere as variáveis &lt;code&gt;GITHUB_REPONAME&lt;/code&gt; e &lt;code&gt;GITHUB_REPO_BRANCH&lt;/code&gt; no arquivo &lt;code&gt;Rakefile&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Rode o comando &lt;code&gt;rake&lt;/code&gt; ou &lt;code&gt;rake publish&lt;/code&gt; para publicar os arquivos finais no Github&lt;/li&gt; &lt;/ol&gt; &lt;hr /&gt; &lt;h2 id=&quot;licena&quot;&gt;Licença&lt;/h2&gt; &lt;p&gt;Este tema é liberado sob licença &lt;a href=&quot;https://github.com/nandomoreirame/dotX/blob/master/LICENSE&quot;&gt;MIT&lt;/a&gt;.&lt;/p&gt; &lt;hr...</description>
+        <pubDate>Mon, 21 Dec 2015 20:55:22 +0000</pubDate>
+        <link>http://nandomoreira.me/dotX-mais-um-tema-para-jekyll</link>
+        <guid isPermaLink="true">http://nandomoreira.me/dotX-mais-um-tema-para-jekyll</guid>
+        
+        <category>temas</category>
+        
+        <category>jekyll</category>
+        
+        <category>download</category>
+        
+        
+        <category>temas-jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Ei front-end! Você conhece o Panda?</title>
+        <description>&lt;p&gt;Essa é uma dica rápida para os amantes da web, quem gosta, ama e trabalha com desenvolvimento de interfaces para o usuário.&lt;/p&gt; &lt;h2 id=&quot;o-que-&quot;&gt;O que é?&lt;/h2&gt; &lt;p&gt;O &lt;a href=&quot;http://usepanda.com/&quot;&gt;Panda 4 - News &amp;amp; Inspiration Dashboard&lt;/a&gt; é um dashborad (painel) com freeds de websites, one pages, imagens, fotos e projetos inspiradores para quem gosta de apreciar essa arte.&lt;/p&gt; &lt;p&gt;Ele tem a versão &lt;a href=&quot;http://usepanda.com/app/&quot;&gt;web&lt;/a&gt; e extensões para &lt;a href=&quot;https://addons.mozilla.org/en-US/firefox/addon/panda-daily-news/&quot;&gt;Firefox&lt;/a&gt; e &lt;a href=&quot;https://chrome.google.com/webstore/detail/panda-4-news-inspiration/haafibkemckmbknhfkiiniobjpgkebko&quot;&gt;Google Chrome&lt;/a&gt;. Eu uso ele nos dois navegadores (Firefox e Chrome).&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;/assets/posts/2015/12/panda-app-chrome-extension-b4d1e4f18a7d84622a02db9cb7a38efb.png&quot; class=&quot;swipebox&quot; rel=&quot;gallery&quot; title=&quot;Panda app extensão para chrome&quot;&gt; &lt;img src=&quot;/assets/posts/2015/12/panda-app-chrome-extension-b4d1e4f18a7d84622a02db9cb7a38efb.png&quot; alt=&quot;Panda app extensão para chrome&quot; width=&quot;1211&quot; height=&quot;915&quot; /&gt;...</description>
+        <pubDate>Fri, 11 Dec 2015 15:30:53 +0000</pubDate>
+        <link>http://nandomoreira.me/ei-front-end-voce-conhece-o-panda</link>
+        <guid isPermaLink="true">http://nandomoreira.me/ei-front-end-voce-conhece-o-panda</guid>
+        
+        <category>dicas</category>
+        
+        
+        <category>dicas</category>
+        
+      </item>
+    
+      <item>
+        <title>simplest - mais um tema para Jekyll</title>
+        <description>&lt;h2 id=&quot;como-usar&quot;&gt;Como usar&lt;/h2&gt; &lt;ol&gt; &lt;li&gt;Faça o Download ou clone o repo &lt;code&gt;git clone git@github.com:nandomoreirame/simplest.git&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Entre no diretório: &lt;code&gt;cd simplest/&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Instale as dependencias do Ruby: &lt;code&gt;bundle install&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Inicie o servidor Jekyll: &lt;code&gt;jekyll serve&lt;/code&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;Acesse, &lt;a href=&quot;http://localhost:4000/simplest&quot;&gt;localhost:4000/simplest&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;usando-rake-tasks&quot;&gt;Usando Rake tasks&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Criar nova página: &lt;code&gt;rake page name=&quot;contato.md&quot;&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Criar novo post: &lt;code&gt;rake post title=&quot;TITULO DO POST&quot;&lt;/code&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;fazendo-o-deploy-no-github&quot;&gt;Fazendo o deploy no Github&lt;/h3&gt; &lt;ol&gt; &lt;li&gt;Altere as variáveis &lt;code&gt;GITHUB_REPONAME&lt;/code&gt; e &lt;code&gt;GITHUB_REPO_BRANCH&lt;/code&gt; no arquivo &lt;code&gt;Rakefile&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Rode o comando &lt;code&gt;rake&lt;/code&gt; ou &lt;code&gt;rake publish&lt;/code&gt; para publicar os arquivos finais no Github&lt;/li&gt; &lt;/ol&gt; &lt;hr /&gt; &lt;h2 id=&quot;licena&quot;&gt;Licença&lt;/h2&gt; &lt;p&gt;Este tema é liberado sob licença &lt;a href=&quot;https://github.com/nandomoreirame/simplest/blob/master/LICENSE&quot;&gt;MIT&lt;/a&gt;.&lt;/p&gt; &lt;hr...</description>
+        <pubDate>Fri, 11 Dec 2015 14:55:22 +0000</pubDate>
+        <link>http://nandomoreira.me/simplest-mais-um-tema-para-jekyll</link>
+        <guid isPermaLink="true">http://nandomoreira.me/simplest-mais-um-tema-para-jekyll</guid>
+        
+        <category>temas</category>
+        
+        <category>jekyll</category>
+        
+        <category>download</category>
+        
+        
+        <category>temas-jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>end2end - mais um tema para Jekyll</title>
+        <description>&lt;h2 id=&quot;como-usar&quot;&gt;Como usar&lt;/h2&gt; &lt;ol&gt; &lt;li&gt;Faça o Download ou clone o repo &lt;code&gt;git clone git@github.com:nandomoreirame/end2end.git&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Entre no diretório: &lt;code&gt;cd end2end/&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Instale as dependencias do Ruby: &lt;code&gt;bundle install&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Inicie o servidor Jekyll: &lt;code&gt;jekyll serve&lt;/code&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;Acesse, &lt;a href=&quot;http://localhost:4000/end2end&quot;&gt;localhost:4000/end2end&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;usando-rake-tasks&quot;&gt;Usando Rake tasks&lt;/h3&gt; &lt;ul&gt; &lt;li&gt;Criar nova página: &lt;code&gt;rake page name=&quot;contato.md&quot;&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Criar novo post: &lt;code&gt;rake post title=&quot;TITULO DO POST&quot;&lt;/code&gt;&lt;/li&gt; &lt;/ul&gt; &lt;h3 id=&quot;fazendo-o-deploy-no-github&quot;&gt;Fazendo o deploy no Github&lt;/h3&gt; &lt;ol&gt; &lt;li&gt;Altere as variáveis &lt;code&gt;GITHUB_REPONAME&lt;/code&gt; e &lt;code&gt;GITHUB_REPO_BRANCH&lt;/code&gt; no arquivo &lt;code&gt;Rakefile&lt;/code&gt;&lt;/li&gt; &lt;li&gt;Rode o comando &lt;code&gt;rake&lt;/code&gt; ou &lt;code&gt;rake publish&lt;/code&gt; para publicar os arquivos finais no Github&lt;/li&gt; &lt;/ol&gt; &lt;hr /&gt; &lt;h2 id=&quot;licena&quot;&gt;Licença&lt;/h2&gt; &lt;p&gt;Este tema é liberado sob licença &lt;a href=&quot;https://github.com/nandomoreirame/end2end/blob/master/LICENSE&quot;&gt;MIT&lt;/a&gt;.&lt;/p&gt; &lt;hr...</description>
+        <pubDate>Fri, 11 Dec 2015 14:45:22 +0000</pubDate>
+        <link>http://nandomoreira.me/end2end-mais-um-tema-para-jekyll</link>
+        <guid isPermaLink="true">http://nandomoreira.me/end2end-mais-um-tema-para-jekyll</guid>
+        
+        <category>temas</category>
+        
+        <category>jekyll</category>
+        
+        <category>download</category>
+        
+        
+        <category>temas-jekyll</category>
+        
+      </item>
+    
+      <item>
+        <title>Não seja apenas um recortador de PSD!</title>
+        <description>&lt;blockquote&gt; &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Eu pensei muito antes de escrever esse artigo, sério! Não sou muito bom em passar sermão ou dicas por textos, mas vamos lá…&lt;/p&gt; &lt;/blockquote&gt; &lt;h2 id=&quot;um-assunto-polmico&quot;&gt;Um assunto polêmico&lt;/h2&gt; &lt;p&gt;Eu tenho um pouco mais de 6 anos de experiência em desenvolvimento web e posso falar que já vi de tudo um pouco nessa área, e esse artigo vai tratar de um assunto um pouco polêmico (como mamilos): &lt;em&gt;&lt;strong&gt;O profissional deve saber de outras áreas que não são relacionadas a área dele?&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;/assets/images/posts/2015/12/polemico.jpg&quot; alt=&quot;Um assunto polêmico!&quot; /&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;&lt;strong&gt;Nota:&lt;/strong&gt; Porque eu me referi ao &lt;strong&gt;profissional&lt;/strong&gt; e não ao &lt;strong&gt;front-end&lt;/strong&gt;...</description>
+        <pubDate>Thu, 10 Dec 2015 23:37:08 +0000</pubDate>
+        <link>http://nandomoreira.me/nao-seja-apenas-um-recortador-de-psd</link>
+        <guid isPermaLink="true">http://nandomoreira.me/nao-seja-apenas-um-recortador-de-psd</guid>
+        
+        <category>front-end</category>
+        
+        
+        <category>geral</category>
+        
+      </item>
+    
+  </channel>
+</rss>

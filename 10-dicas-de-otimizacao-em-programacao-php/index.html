@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html class="no-js" lang="pt-br" itemscope itemtype="http://schema.org/BlogPosting">
+  <head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="zS1dSn20XtA4FJYEOQLXqI0boxZdMnJ2g3beje-cl20">
+  <title>10 dicas de otimização em programação PHP • Fernando Moreira</title>
+  <meta name="description" content="10 dicas de otimização em programação PHP">
+  <meta name="keywords" content="Dicas, PHP, Programação">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="theme-color" content="#333333">
+  <!-- Social: Facebook / Open Graph -->
+  <meta property="fb:admins" content="100003797913346">
+  <meta property="fb:app_id" content="585852118228520">
+  <meta property="og:type" content="article">
+  <meta property="article:author" content="Fernando Moreira">
+  <meta property="article:section" content="php">
+  <meta property="article:tag" content="Dicas, PHP, Programação">
+  <meta property="article:published_time" content="2011-11-03 12:27:00 +0000">
+  <meta property="og:url" content="http://nandomoreira.me/10-dicas-de-otimizacao-em-programacao-php/">
+  <meta property="og:title" content="10 dicas de otimização em programação PHP • Fernando Moreira">
+  <meta property="og:image" content="http://nandomoreira.me/assets/images/posts/2011/11/php-default.jpg">
+  <meta property="og:description" content="10 dicas de otimização em programação PHP">
+  <meta property="og:site_name" content="Fernando Moreira">
+  <meta property="og:locale" content="pt_BR">
+  <!-- Social: Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@nandomoreirame">
+  <meta name="twitter:title" content="10 dicas de otimização em programação PHP • Fernando Moreira">
+  <meta name="twitter:description" content="10 dicas de otimização em programação PHP">
+  <meta name="twitter:image:src" content="http://nandomoreira.me/assets/images/posts/2011/11/php-default.jpg">
+  <!-- Social: Google+ / Schema.org  -->
+  <meta itemprop="name" content="10 dicas de otimização em programação PHP • Fernando Moreira">
+  <meta itemprop="description" content="10 dicas de otimização em programação PHP">
+  <meta itemprop="image" content="http://nandomoreira.me/assets/images/posts/2011/11/php-default.jpg">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/assets/images/ico/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/assets/images/ico/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/assets/images/ico/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/assets/images/ico/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/assets/images/ico/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/assets/images/ico/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/assets/images/ico/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/assets/images/ico/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/ico/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/images/ico/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/ico/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/ico/favicon-16x16.png">
+  <link rel="shortcut icon" href="/assets/images/ico/favicon-16x16.png">
+  <link rel="manifest" href="/assets/images/ico/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/assets/images/ico/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- rel prev and next -->
+  <link rel="stylesheet" href="/assets/main-3c8fb1ff3bcc97080565e5e4d4bcde01.css">
+  <script src="/assets/modernizr-custom-b96052449ccebf05ffe0872e19826881.js" data-cfasync="false"></script>
+  <!-- Canonical link tag -->
+  <link rel="canonical" href="http://nandomoreira.me/10-dicas-de-otimizacao-em-programacao-php/">
+  <link rel="alternate" type="application/rss+xml" title="Fernando Moreira" href="http://nandomoreira.me/feed.xml">
+  <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-52446115-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  </script>
+  <script type="text/javascript">
+    var disqus_shortname = 'fernandomoreira';
+  </script>
+</head>
+  <body class="post-template no-sidebar single">
+<div class="menu-hanburg">
+  <a href="#" class="hanburg" role="button">
+    <span></span>
+  </a>
+</div>
+<div class="top-search">
+  <button type="button" class="tcon tcon-search-xcross open-close-search" aria-label="toggle search">
+    <span class="tcon-search-item" aria-hidden="true"></span>
+    <span class="tcon-visuallyhidden">toggle search</span>
+  </button>
+</div>
+<header class="header">
+  <div class="svg-pattern">
+  <svg width="1920" height="936">
+    <path d="M-2,-153L92,-140L631,-144Z"></path>
+    <path d="M955,1086L858,1086L1056,1093Z"></path>
+    <path d="M858,1086L690,1090L1056,1093Z"></path>
+    <path d="M631,-144L1133,-158L1188,-162Z"></path>
+    <path d="M-2,-153L631,-144L1188,-162Z"></path>
+    <path d="M1205,1062L1056,1093L1520,1069Z"></path>
+    <path d="M1520,1069L1056,1093L1606,1079Z"></path>
+    <path d="M1606,1079L1056,1093L1738,1094Z"></path>
+    <path d="M1188,-162L1492,-157L1804,-161Z"></path>
+    <path d="M1972,1033L1868,1050L2042,1070Z"></path>
+    <path d="M1868,1050L1738,1094L2042,1070Z"></path>
+    <path d="M2042,488L2003,607L2049,668Z"></path>
+    <path d="M1947,-75L1981,-29L2052,-151Z"></path>
+    <path d="M2014,190L2002,245L2054,330Z"></path>
+    <path d="M2020,746L1966,814L2064,856Z"></path>
+    <path d="M2000,992L2042,1070L2064,856Z"></path>
+    <path d="M1991,870L2000,992L2064,856Z"></path>
+    <path d="M2049,668L2020,746L2064,856Z"></path>
+    <path d="M2052,-151L1981,-29L2065,3Z"></path>
+    <path d="M2014,190L2054,330L2065,3Z"></path>
+    <path d="M2008,69L2014,190L2065,3Z"></path>
+    <path d="M2054,330L1976,353L2080,407Z"></path>
+    <path d="M1976,353L2042,488L2080,407Z"></path>
+    <path d="M2042,488L2049,668L2080,407Z"></path>
+    <path d="M2049,668L2064,856L2080,407Z"></path>
+    <path d="M2065,3L2054,330L2080,407Z"></path>
+    <path d="M1976,353L1906,430L2042,488Z"></path>
+    <path d="M1804,-161L1889,-91L2052,-151Z"></path>
+    <path d="M1966,814L1991,870L2064,856Z"></path>
+    <path d="M1981,-29L2008,69L2065,3Z"></path>
+    <path d="M1950,88L1940,157L2008,69Z"></path>
+    <path d="M2008,69L1940,157L2014,190Z"></path>
+    <path d="M2000,992L1972,1033L2042,1070Z"></path>
+    <path d="M1913,512L2003,607L2042,488Z"></path>
+    <path d="M1955,674L2020,746L2049,668Z"></path>
+    <path d="M1889,-91L1947,-75L2052,-151Z"></path>
+    <path d="M2002,245L1976,353L2054,330Z"></path>
+    <path d="M1991,870L1929,928L2000,992Z"></path>
+    <path d="M2003,607L1955,674L2049,668Z"></path>
+    <path d="M1906,430L1913,512L2042,488Z"></path>
+    <path d="M252,1072L131,1088L690,1090Z"></path>
+    <path d="M1936,244L1976,353L2002,245Z"></path>
+    <path d="M1913,512L1945,621L2003,607Z"></path>
+    <path d="M1945,621L1955,674L2003,607Z"></path>
+    <path d="M1981,-29L1950,88L2008,69Z"></path>
+    <path d="M1955,674L1966,814L2020,746Z"></path>
+    <path d="M1936,244L2002,245L2014,190Z"></path>
+    <path d="M1940,157L1936,244L2014,190Z"></path>
+    <path d="M1955,674L1875,680L1966,814Z"></path>
+    <path d="M1929,928L1972,1033L2000,992Z"></path>
+    <path d="M1929,928L1879,974L1972,1033Z"></path>
+    <path d="M1836,62L1950,88L1981,-29Z"></path>
+    <path d="M1966,814L1883,882L1991,870Z"></path>
+    <path d="M1883,882L1929,928L1991,870Z"></path>
+    <path d="M1875,680L1834,796L1966,814Z"></path>
+    <path d="M1936,244L1833,360L1976,353Z"></path>
+    <path d="M1947,-75L1841,-52L1981,-29Z"></path>
+    <path d="M1841,-52L1836,62L1981,-29Z"></path>
+    <path d="M1826,281L1833,360L1936,244Z"></path>
+    <path d="M1833,360L1870,404L1976,353Z"></path>
+    <path d="M1870,404L1906,430L1976,353Z"></path>
+    <path d="M1879,974L1868,1050L1972,1033Z"></path>
+    <path d="M1889,-91L1841,-52L1947,-75Z"></path>
+    <path d="M1834,796L1883,882L1966,814Z"></path>
+    <path d="M1842,122L1940,157L1950,88Z"></path>
+    <path d="M1945,621L1875,680L1955,674Z"></path>
+    <path d="M1842,122L1936,244L1940,157Z"></path>
+    <path d="M1913,512L1820,644L1945,621Z"></path>
+    <path d="M1836,62L1842,122L1950,88Z"></path>
+    <path d="M1808,520L1820,644L1913,512Z"></path>
+    <path d="M1842,122L1826,281L1936,244Z"></path>
+    <path d="M1820,644L1875,680L1945,621Z"></path>
+    <path d="M1856,494L1808,520L1913,512Z"></path>
+    <path d="M1906,430L1856,494L1913,512Z"></path>
+    <path d="M1883,882L1879,974L1929,928Z"></path>
+    <path d="M92,-140L324,-119L631,-144Z"></path>
+    <path d="M1779,252L1826,281L1842,122Z"></path>
+    <path d="M1810,771L1834,796L1875,680Z"></path>
+    <path d="M1870,404L1856,494L1906,430Z"></path>
+    <path d="M1776,718L1810,771L1875,680Z"></path>
+    <path d="M1755,990L1879,974L1883,882Z"></path>
+    <path d="M1731,881L1755,990L1883,882Z"></path>
+    <path d="M1804,-161L1841,-52L1889,-91Z"></path>
+    <path d="M1755,990L1868,1050L1879,974Z"></path>
+    <path d="M1834,796L1731,881L1883,882Z"></path>
+    <path d="M1761,405L1856,494L1870,404Z"></path>
+    <path d="M1804,-161L1790,-56L1841,-52Z"></path>
+    <path d="M1796,113L1779,252L1842,122Z"></path>
+    <path d="M1820,644L1776,718L1875,680Z"></path>
+    <path d="M1790,-56L1836,62L1841,-52Z"></path>
+    <path d="M1833,360L1761,405L1870,404Z"></path>
+    <path d="M1761,405L1808,520L1856,494Z"></path>
+    <path d="M1755,990L1738,1094L1868,1050Z"></path>
+    <path d="M1836,62L1796,113L1842,122Z"></path>
+    <path d="M1808,520L1733,633L1820,644Z"></path>
+    <path d="M1771,355L1761,405L1833,360Z"></path>
+    <path d="M1826,281L1771,355L1833,360Z"></path>
+    <path d="M1810,771L1731,881L1834,796Z"></path>
+    <path d="M1790,-56L1709,20L1836,62Z"></path>
+    <path d="M1706,218L1779,252L1796,113Z"></path>
+    <path d="M1492,-157L1551,-103L1804,-161Z"></path>
+    <path d="M1761,405L1714,467L1808,520Z"></path>
+    <path d="M1730,104L1796,113L1836,62Z"></path>
+    <path d="M1709,20L1730,104L1836,62Z"></path>
+    <path d="M1551,-103L1680,-77L1804,-161Z"></path>
+    <path d="M1779,252L1771,355L1826,281Z"></path>
+    <path d="M1730,104L1706,218L1796,113Z"></path>
+    <path d="M1733,633L1776,718L1820,644Z"></path>
+    <path d="M1714,467L1644,545L1733,633Z"></path>
+    <path d="M1731,881L1698,944L1755,990Z"></path>
+    <path d="M1680,-77L1790,-56L1804,-161Z"></path>
+    <path d="M1714,467L1733,633L1808,520Z"></path>
+    <path d="M1671,827L1731,881L1810,771Z"></path>
+    <path d="M1776,718L1723,709L1810,771Z"></path>
+    <path d="M1723,709L1671,827L1810,771Z"></path>
+    <path d="M1733,633L1723,709L1776,718Z"></path>
+    <path d="M1657,292L1771,355L1779,252Z"></path>
+    <path d="M1419,1041L1205,1062L1520,1069Z"></path>
+    <path d="M1680,-77L1709,20L1790,-56Z"></path>
+    <path d="M1663,1025L1738,1094L1755,990Z"></path>
+    <path d="M1706,218L1657,292L1779,252Z"></path>
+    <path d="M1657,292L1761,405L1771,355Z"></path>
+    <path d="M1652,124L1706,218L1730,104Z"></path>
+    <path d="M1708,887L1698,944L1731,881Z"></path>
+    <path d="M1657,292L1592,359L1761,405Z"></path>
+    <path d="M1590,401L1714,467L1761,405Z"></path>
+    <path d="M1592,359L1590,401L1761,405Z"></path>
+    <path d="M1680,-77L1656,-17L1709,20Z"></path>
+    <path d="M1698,944L1663,1025L1755,990Z"></path>
+    <path d="M1709,20L1652,124L1730,104Z"></path>
+    <path d="M1671,827L1708,887L1731,881Z"></path>
+    <path d="M1644,545L1653,645L1733,633Z"></path>
+    <path d="M1653,645L1723,709L1733,633Z"></path>
+    <path d="M1663,1025L1606,1079L1738,1094Z"></path>
+    <path d="M1632,24L1652,124L1709,20Z"></path>
+    <path d="M1554,708L1671,827L1723,709Z"></path>
+    <path d="M1653,645L1554,708L1723,709Z"></path>
+    <path d="M631,-144L805,-115L1133,-158Z"></path>
+    <path d="M1554,708L1590,824L1671,827Z"></path>
+    <path d="M1566,500L1644,545L1714,467Z"></path>
+    <path d="M1590,401L1566,500L1714,467Z"></path>
+    <path d="M1633,944L1663,1025L1698,944Z"></path>
+    <path d="M1652,124L1591,247L1706,218Z"></path>
+    <path d="M1633,944L1698,944L1708,887Z"></path>
+    <path d="M1656,-17L1632,24L1709,20Z"></path>
+    <path d="M1591,247L1657,292L1706,218Z"></path>
+    <path d="M1671,827L1633,944L1708,887Z"></path>
+    <path d="M1632,24L1629,119L1652,124Z"></path>
+    <path d="M1585,904L1633,944L1671,827Z"></path>
+    <path d="M1629,119L1591,247L1652,124Z"></path>
+    <path d="M1644,545L1592,620L1653,645Z"></path>
+    <path d="M1590,824L1585,904L1671,827Z"></path>
+    <path d="M1551,-103L1656,-17L1680,-77Z"></path>
+    <path d="M1554,708L1537,742L1590,824Z"></path>
+    <path d="M1540,165L1591,247L1629,119Z"></path>
+    <path d="M1551,-103L1591,13L1656,-17Z"></path>
+    <path d="M1633,944L1606,1079L1663,1025Z"></path>
+    <path d="M1592,620L1554,708L1653,645Z"></path>
+    <path d="M1591,247L1592,359L1657,292Z"></path>
+    <path d="M1527,932L1606,1079L1633,944Z"></path>
+    <path d="M1591,13L1632,24L1656,-17Z"></path>
+    <path d="M1527,932L1520,1069L1606,1079Z"></path>
+    <path d="M1591,13L1629,119L1632,24Z"></path>
+    <path d="M1551,-103L1542,-6L1591,13Z"></path>
+    <path d="M1566,500L1592,620L1644,545Z"></path>
+    <path d="M1591,13L1540,165L1629,119Z"></path>
+    <path d="M1585,904L1527,932L1633,944Z"></path>
+    <path d="M1506,437L1566,500L1590,401Z"></path>
+    <path d="M1542,-6L1457,82L1591,13Z"></path>
+    <path d="M1457,82L1540,165L1591,13Z"></path>
+    <path d="M1591,247L1470,308L1592,359Z"></path>
+    <path d="M1566,500L1482,538L1592,620Z"></path>
+    <path d="M1478,868L1527,932L1585,904Z"></path>
+    <path d="M1478,868L1585,904L1590,824Z"></path>
+    <path d="M1540,165L1458,252L1591,247Z"></path>
+    <path d="M1458,252L1470,308L1591,247Z"></path>
+    <path d="M1506,437L1590,401L1592,359Z"></path>
+    <path d="M1470,308L1506,437L1592,359Z"></path>
+    <path d="M1510,708L1554,708L1592,620Z"></path>
+    <path d="M1469,620L1510,708L1592,620Z"></path>
+    <path d="M1482,538L1469,620L1592,620Z"></path>
+    <path d="M1537,742L1478,868L1590,824Z"></path>
+    <path d="M1188,-162L1342,-103L1492,-157Z"></path>
+    <path d="M1428,990L1520,1069L1527,932Z"></path>
+    <path d="M1450,216L1458,252L1540,165Z"></path>
+    <path d="M1506,437L1482,538L1566,500Z"></path>
+    <path d="M1452,193L1450,216L1540,165Z"></path>
+    <path d="M1404,-76L1542,-6L1551,-103Z"></path>
+    <path d="M1510,708L1537,742L1554,708Z"></path>
+    <path d="M1492,-157L1404,-76L1551,-103Z"></path>
+    <path d="M618,1075L252,1072L690,1090Z"></path>
+    <path d="M1470,308L1433,420L1506,437Z"></path>
+    <path d="M1510,708L1380,815L1537,742Z"></path>
+    <path d="M1380,815L1478,868L1537,742Z"></path>
+    <path d="M1457,82L1452,193L1540,165Z"></path>
+    <path d="M1412,6L1457,82L1542,-6Z"></path>
+    <path d="M1404,-76L1412,6L1542,-6Z"></path>
+    <path d="M1442,516L1482,538L1506,437Z"></path>
+    <path d="M1469,620L1447,684L1510,708Z"></path>
+    <path d="M1428,990L1419,1041L1520,1069Z"></path>
+    <path d="M1442,316L1433,420L1470,308Z"></path>
+    <path d="M1447,684L1380,815L1510,708Z"></path>
+    <path d="M1478,868L1428,990L1527,932Z"></path>
+    <path d="M1278,1025L1205,1062L1419,1041Z"></path>
+    <path d="M1427,575L1469,620L1482,538Z"></path>
+    <path d="M1433,420L1442,516L1506,437Z"></path>
+    <path d="M1380,815L1385,857L1478,868Z"></path>
+    <path d="M1385,857L1428,990L1478,868Z"></path>
+    <path d="M1342,-103L1404,-76L1492,-157Z"></path>
+    <path d="M1398,69L1452,193L1457,82Z"></path>
+    <path d="M1442,516L1427,575L1482,538Z"></path>
+    <path d="M1355,693L1380,815L1447,684Z"></path>
+    <path d="M1412,6L1398,69L1457,82Z"></path>
+    <path d="M1458,252L1442,316L1470,308Z"></path>
+    <path d="M1385,857L1343,957L1428,990Z"></path>
+    <path d="M1361,607L1447,684L1469,620Z"></path>
+    <path d="M1427,575L1361,607L1469,620Z"></path>
+    <path d="M1398,69L1360,74L1452,193Z"></path>
+    <path d="M1360,74L1314,200L1452,193Z"></path>
+    <path d="M1450,216L1314,200L1458,252Z"></path>
+    <path d="M1314,200L1442,316L1458,252Z"></path>
+    <path d="M1433,420L1320,530L1442,516Z"></path>
+    <path d="M1286,336L1433,420L1442,316Z"></path>
+    <path d="M1361,607L1355,693L1447,684Z"></path>
+    <path d="M1314,200L1450,216L1452,193Z"></path>
+    <path d="M1314,200L1286,336L1442,316Z"></path>
+    <path d="M1320,530L1427,575L1442,516Z"></path>
+    <path d="M1277,439L1320,530L1433,420Z"></path>
+    <path d="M1286,336L1277,439L1433,420Z"></path>
+    <path d="M1355,693L1307,748L1380,815Z"></path>
+    <path d="M1404,-76L1347,-60L1412,6Z"></path>
+    <path d="M1320,530L1361,607L1427,575Z"></path>
+    <path d="M1343,957L1419,1041L1428,990Z"></path>
+    <path d="M1295,110L1314,200L1360,74Z"></path>
+    <path d="M1360,74L1398,69L1412,6Z"></path>
+    <path d="M1343,957L1278,1025L1419,1041Z"></path>
+    <path d="M1347,-60L1360,74L1412,6Z"></path>
+    <path d="M1347,-60L1272,23L1360,74Z"></path>
+    <path d="M1342,-103L1347,-60L1404,-76Z"></path>
+    <path d="M1276,896L1343,957L1385,857Z"></path>
+    <path d="M1380,815L1259,827L1385,857Z"></path>
+    <path d="M1259,827L1276,896L1385,857Z"></path>
+    <path d="M1307,748L1259,827L1380,815Z"></path>
+    <path d="M1272,23L1295,110L1360,74Z"></path>
+    <path d="M1247,626L1355,693L1361,607Z"></path>
+    <path d="M1320,530L1247,626L1361,607Z"></path>
+    <path d="M1247,626L1307,748L1355,693Z"></path>
+    <path d="M1342,-103L1186,-11L1347,-60Z"></path>
+    <path d="M1186,-11L1272,23L1347,-60Z"></path>
+    <path d="M1188,-162L1186,-11L1342,-103Z"></path>
+    <path d="M1276,896L1278,1025L1343,957Z"></path>
+    <path d="M1199,217L1286,336L1314,200Z"></path>
+    <path d="M1276,896L1217,1004L1278,1025Z"></path>
+    <path d="M1247,626L1190,693L1307,748Z"></path>
+    <path d="M1295,110L1196,141L1314,200Z"></path>
+    <path d="M1277,439L1204,515L1320,530Z"></path>
+    <path d="M1204,515L1247,626L1320,530Z"></path>
+    <path d="M1240,895L1217,1004L1276,896Z"></path>
+    <path d="M1199,217L1193,333L1286,336Z"></path>
+    <path d="M1196,141L1199,217L1314,200Z"></path>
+    <path d="M1190,693L1259,827L1307,748Z"></path>
+    <path d="M1259,827L1240,895L1276,896Z"></path>
+    <path d="M1193,333L1199,450L1277,439Z"></path>
+    <path d="M1199,450L1204,515L1277,439Z"></path>
+    <path d="M1193,333L1277,439L1286,336Z"></path>
+    <path d="M1272,23L1196,141L1295,110Z"></path>
+    <path d="M805,-115L971,-96L1133,-158Z"></path>
+    <path d="M1193,333L1159,393L1199,450Z"></path>
+    <path d="M1140,50L1196,141L1272,23Z"></path>
+    <path d="M1186,-11L1140,50L1272,23Z"></path>
+    <path d="M1217,1004L1205,1062L1278,1025Z"></path>
+    <path d="M1190,693L1105,763L1259,827Z"></path>
+    <path d="M1140,50L1161,127L1196,141Z"></path>
+    <path d="M1155,1048L1056,1093L1205,1062Z"></path>
+    <path d="M1159,906L1217,1004L1240,895Z"></path>
+    <path d="M1204,515L1126,619L1247,626Z"></path>
+    <path d="M1159,906L1240,895L1259,827Z"></path>
+    <path d="M1105,763L1159,906L1259,827Z"></path>
+    <path d="M1134,661L1190,693L1247,626Z"></path>
+    <path d="M1126,619L1134,661L1247,626Z"></path>
+    <path d="M1133,-158L1186,-11L1188,-162Z"></path>
+    <path d="M1133,-158L1079,-107L1186,-11Z"></path>
+    <path d="M1079,-107L1097,-26L1186,-11Z"></path>
+    <path d="M1100,249L1146,344L1193,333Z"></path>
+    <path d="M1100,249L1193,333L1199,217Z"></path>
+    <path d="M1199,450L1166,470L1204,515Z"></path>
+    <path d="M1159,906L1107,965L1217,1004Z"></path>
+    <path d="M1107,965L1155,1048L1217,1004Z"></path>
+    <path d="M1155,1048L1205,1062L1217,1004Z"></path>
+    <path d="M1146,344L1159,393L1193,333Z"></path>
+    <path d="M1196,141L1161,127L1199,217Z"></path>
+    <path d="M1161,127L1084,178L1199,217Z"></path>
+    <path d="M1166,470L1126,619L1204,515Z"></path>
+    <path d="M1084,178L1100,249L1199,217Z"></path>
+    <path d="M1159,393L1166,470L1199,450Z"></path>
+    <path d="M1027,529L1126,619L1166,470Z"></path>
+    <path d="M1134,661L1105,763L1190,693Z"></path>
+    <path d="M1105,763L1066,778L1159,906Z"></path>
+    <path d="M1066,778L1028,852L1159,906Z"></path>
+    <path d="M1097,-26L1140,50L1186,-11Z"></path>
+    <path d="M1159,393L1069,391L1166,470Z"></path>
+    <path d="M1069,391L1027,529L1166,470Z"></path>
+    <path d="M1017,84L1084,178L1140,50Z"></path>
+    <path d="M1146,344L1069,391L1159,393Z"></path>
+    <path d="M1140,50L1084,178L1161,127Z"></path>
+    <path d="M1027,529L1088,629L1126,619Z"></path>
+    <path d="M1100,249L1044,297L1146,344Z"></path>
+    <path d="M1028,852L1107,965L1159,906Z"></path>
+    <path d="M1049,680L1105,763L1134,661Z"></path>
+    <path d="M1097,-26L1071,14L1140,50Z"></path>
+    <path d="M1107,965L1034,998L1155,1048Z"></path>
+    <path d="M1034,998L1056,1093L1155,1048Z"></path>
+    <path d="M971,-96L1079,-107L1133,-158Z"></path>
+    <path d="M1071,14L1017,84L1140,50Z"></path>
+    <path d="M1044,297L1069,391L1146,344Z"></path>
+    <path d="M1126,619L1088,629L1134,661Z"></path>
+    <path d="M1088,629L1049,680L1134,661Z"></path>
+    <path d="M324,-119L528,-120L631,-144Z"></path>
+    <path d="M973,478L1027,529L1069,391Z"></path>
+    <path d="M1049,680L1066,778L1105,763Z"></path>
+    <path d="M1028,852L1034,998L1107,965Z"></path>
+    <path d="M1084,178L1024,275L1100,249Z"></path>
+    <path d="M1079,-107L971,-96L1097,-26Z"></path>
+    <path d="M1024,275L1044,297L1100,249Z"></path>
+    <path d="M971,-96L1071,14L1097,-26Z"></path>
+    <path d="M1027,529L1049,680L1088,629Z"></path>
+    <path d="M1027,529L916,582L1049,680Z"></path>
+    <path d="M1049,680L970,725L1066,778Z"></path>
+    <path d="M971,-96L973,39L1071,14Z"></path>
+    <path d="M934,165L1024,275L1084,178Z"></path>
+    <path d="M1017,84L934,165L1084,178Z"></path>
+    <path d="M971,-96L940,-67L973,39Z"></path>
+    <path d="M1028,852L995,1003L1034,998Z"></path>
+    <path d="M970,725L1002,791L1066,778Z"></path>
+    <path d="M1002,791L1028,852L1066,778Z"></path>
+    <path d="M934,165L966,273L1024,275Z"></path>
+    <path d="M1034,998L995,1003L1056,1093Z"></path>
+    <path d="M1044,297L997,288L1069,391Z"></path>
+    <path d="M997,288L942,401L1069,391Z"></path>
+    <path d="M942,401L973,478L1069,391Z"></path>
+    <path d="M973,39L1017,84L1071,14Z"></path>
+    <path d="M805,-115L829,-100L971,-96Z"></path>
+    <path d="M995,1003L955,1086L1056,1093Z"></path>
+    <path d="M931,850L995,1003L1028,852Z"></path>
+    <path d="M916,582L970,725L1049,680Z"></path>
+    <path d="M896,880L883,929L931,850Z"></path>
+    <path d="M931,850L883,929L995,1003Z"></path>
+    <path d="M1024,275L997,288L1044,297Z"></path>
+    <path d="M911,371L942,401L997,288Z"></path>
+    <path d="M966,273L997,288L1024,275Z"></path>
+    <path d="M973,478L916,582L1027,529Z"></path>
+    <path d="M1002,791L931,850L1028,852Z"></path>
+    <path d="M973,39L934,165L1017,84Z"></path>
+    <path d="M916,582L859,664L970,725Z"></path>
+    <path d="M940,-67L914,-52L973,39Z"></path>
+    <path d="M966,273L911,371L997,288Z"></path>
+    <path d="M970,725L931,850L1002,791Z"></path>
+    <path d="M861,764L931,850L970,725Z"></path>
+    <path d="M863,118L934,165L973,39Z"></path>
+    <path d="M883,929L955,1086L995,1003Z"></path>
+    <path d="M893,458L851,500L916,582Z"></path>
+    <path d="M883,929L858,1086L955,1086Z"></path>
+    <path d="M934,165L906,276L966,273Z"></path>
+    <path d="M906,276L911,371L966,273Z"></path>
+    <path d="M829,-100L940,-67L971,-96Z"></path>
+    <path d="M914,-52L842,42L973,39Z"></path>
+    <path d="M842,42L863,118L973,39Z"></path>
+    <path d="M942,401L893,458L973,478Z"></path>
+    <path d="M893,458L916,582L973,478Z"></path>
+    <path d="M859,664L861,764L970,725Z"></path>
+    <path d="M829,-100L914,-52L940,-67Z"></path>
+    <path d="M794,988L858,1086L883,929Z"></path>
+    <path d="M805,186L906,276L934,165Z"></path>
+    <path d="M911,371L893,458L942,401Z"></path>
+    <path d="M851,593L859,664L916,582Z"></path>
+    <path d="M861,764L896,880L931,850Z"></path>
+    <path d="M863,118L805,186L934,165Z"></path>
+    <path d="M861,764L809,821L896,880Z"></path>
+    <path d="M859,664L821,731L861,764Z"></path>
+    <path d="M784,426L893,458L911,371Z"></path>
+    <path d="M906,276L799,321L911,371Z"></path>
+    <path d="M790,-1L842,42L914,-52Z"></path>
+    <path d="M829,-100L790,-1L914,-52Z"></path>
+    <path d="M851,500L851,593L916,582Z"></path>
+    <path d="M799,321L784,426L911,371Z"></path>
+    <path d="M805,186L765,267L906,276Z"></path>
+    <path d="M765,267L799,321L906,276Z"></path>
+    <path d="M770,1055L690,1090L858,1086Z"></path>
+    <path d="M805,874L883,929L896,880Z"></path>
+    <path d="M809,821L805,874L896,880Z"></path>
+    <path d="M784,426L851,500L893,458Z"></path>
+    <path d="M794,988L770,1055L858,1086Z"></path>
+    <path d="M805,874L794,988L883,929Z"></path>
+    <path d="M763,475L805,610L851,500Z"></path>
+    <path d="M784,426L763,475L851,500Z"></path>
+    <path d="M851,500L805,610L851,593Z"></path>
+    <path d="M851,593L805,610L859,664Z"></path>
+    <path d="M842,42L771,60L863,118Z"></path>
+    <path d="M771,60L805,186L863,118Z"></path>
+    <path d="M821,731L809,821L861,764Z"></path>
+    <path d="M805,610L821,731L859,664Z"></path>
+    <path d="M763,475L708,530L805,610Z"></path>
+    <path d="M805,610L694,705L821,731Z"></path>
+    <path d="M805,-115L790,-1L829,-100Z"></path>
+    <path d="M790,-1L771,60L842,42Z"></path>
+    <path d="M771,60L694,157L805,186Z"></path>
+    <path d="M631,-144L706,-82L805,-115Z"></path>
+    <path d="M706,-82L790,-1L805,-115Z"></path>
+    <path d="M714,751L809,821L821,731Z"></path>
+    <path d="M660,925L794,988L805,874Z"></path>
+    <path d="M694,705L714,751L821,731Z"></path>
+    <path d="M665,369L784,426L799,321Z"></path>
+    <path d="M708,530L681,584L805,610Z"></path>
+    <path d="M681,584L694,705L805,610Z"></path>
+    <path d="M713,839L660,925L805,874Z"></path>
+    <path d="M713,839L805,874L809,821Z"></path>
+    <path d="M714,751L713,839L809,821Z"></path>
+    <path d="M694,157L765,267L805,186Z"></path>
+    <path d="M765,267L687,275L799,321Z"></path>
+    <path d="M687,275L665,369L799,321Z"></path>
+    <path d="M660,925L770,1055L794,988Z"></path>
+    <path d="M706,-82L653,-35L790,-1Z"></path>
+    <path d="M657,48L771,60L790,-1Z"></path>
+    <path d="M653,-35L657,48L790,-1Z"></path>
+    <path d="M653,-35L642,11L657,48Z"></path>
+    <path d="M694,157L687,275L765,267Z"></path>
+    <path d="M660,925L690,1090L770,1055Z"></path>
+    <path d="M645,450L763,475L784,426Z"></path>
+    <path d="M665,369L645,450L784,426Z"></path>
+    <path d="M657,48L694,157L771,60Z"></path>
+    <path d="M645,450L708,530L763,475Z"></path>
+    <path d="M419,1016L252,1072L618,1075Z"></path>
+    <path d="M660,925L595,970L690,1090Z"></path>
+    <path d="M595,970L618,1075L690,1090Z"></path>
+    <path d="M580,213L687,275L694,157Z"></path>
+    <path d="M657,48L632,86L694,157Z"></path>
+    <path d="M681,584L643,613L694,705Z"></path>
+    <path d="M607,888L660,925L713,839Z"></path>
+    <path d="M595,738L607,888L713,839Z"></path>
+    <path d="M595,738L713,839L714,751Z"></path>
+    <path d="M694,705L595,738L714,751Z"></path>
+    <path d="M643,613L606,671L694,705Z"></path>
+    <path d="M602,545L681,584L708,530Z"></path>
+    <path d="M645,450L602,545L708,530Z"></path>
+    <path d="M477,1015L419,1016L618,1075Z"></path>
+    <path d="M631,-144L653,-35L706,-82Z"></path>
+    <path d="M595,343L665,369L687,275Z"></path>
+    <path d="M632,86L586,136L694,157Z"></path>
+    <path d="M586,136L580,213L694,157Z"></path>
+    <path d="M606,671L595,738L694,705Z"></path>
+    <path d="M547,272L595,343L687,275Z"></path>
+    <path d="M580,213L547,272L687,275Z"></path>
+    <path d="M602,545L643,613L681,584Z"></path>
+    <path d="M348,1024L252,1072L419,1016Z"></path>
+    <path d="M631,-144L527,-68L653,-35Z"></path>
+    <path d="M560,397L645,450L665,369Z"></path>
+    <path d="M595,343L560,397L665,369Z"></path>
+    <path d="M595,738L516,778L607,888Z"></path>
+    <path d="M607,888L595,970L660,925Z"></path>
+    <path d="M642,11L632,86L657,48Z"></path>
+    <path d="M528,-120L527,-68L631,-144Z"></path>
+    <path d="M527,-68L642,11L653,-35Z"></path>
+    <path d="M523,81L632,86L642,11Z"></path>
+    <path d="M560,397L602,545L645,450Z"></path>
+    <path d="M602,545L606,671L643,613Z"></path>
+    <path d="M527,-68L523,81L642,11Z"></path>
+    <path d="M560,397L495,528L602,545Z"></path>
+    <path d="M602,545L483,605L606,671Z"></path>
+    <path d="M523,81L586,136L632,86Z"></path>
+    <path d="M541,396L495,528L560,397Z"></path>
+    <path d="M483,605L488,657L606,671Z"></path>
+    <path d="M595,970L477,1015L618,1075Z"></path>
+    <path d="M484,986L477,1015L595,970Z"></path>
+    <path d="M495,528L483,605L602,545Z"></path>
+    <path d="M488,657L595,738L606,671Z"></path>
+    <path d="M482,914L595,970L607,888Z"></path>
+    <path d="M516,778L482,914L607,888Z"></path>
+    <path d="M457,-30L523,81L527,-68Z"></path>
+    <path d="M506,108L580,213L586,136Z"></path>
+    <path d="M547,272L495,334L595,343Z"></path>
+    <path d="M541,396L560,397L595,343Z"></path>
+    <path d="M495,334L541,396L595,343Z"></path>
+    <path d="M482,914L484,986L595,970Z"></path>
+    <path d="M488,657L516,778L595,738Z"></path>
+    <path d="M324,-119L423,-83L528,-120Z"></path>
+    <path d="M506,108L464,210L580,213Z"></path>
+    <path d="M523,81L506,108L586,136Z"></path>
+    <path d="M464,210L547,272L580,213Z"></path>
+    <path d="M488,657L450,696L516,778Z"></path>
+    <path d="M444,420L495,528L541,396Z"></path>
+    <path d="M444,183L464,210L506,108Z"></path>
+    <path d="M464,210L495,334L547,272Z"></path>
+    <path d="M482,914L463,937L484,986Z"></path>
+    <path d="M495,334L444,420L541,396Z"></path>
+    <path d="M375,869L482,914L516,778Z"></path>
+    <path d="M457,-30L426,97L523,81Z"></path>
+    <path d="M423,-83L457,-30L527,-68Z"></path>
+    <path d="M423,-83L527,-68L528,-120Z"></path>
+    <path d="M419,741L375,869L516,778Z"></path>
+    <path d="M450,696L419,741L516,778Z"></path>
+    <path d="M426,97L506,108L523,81Z"></path>
+    <path d="M464,210L396,357L495,334Z"></path>
+    <path d="M426,97L444,183L506,108Z"></path>
+    <path d="M483,605L452,626L488,657Z"></path>
+    <path d="M396,357L444,420L495,334Z"></path>
+    <path d="M383,548L483,605L495,528Z"></path>
+    <path d="M444,420L383,548L495,528Z"></path>
+    <path d="M383,548L452,626L483,605Z"></path>
+    <path d="M452,626L450,696L488,657Z"></path>
+    <path d="M92,-140L187,-104L324,-119Z"></path>
+    <path d="M375,869L463,937L482,914Z"></path>
+    <path d="M419,1016L477,1015L484,986Z"></path>
+    <path d="M463,937L419,1016L484,986Z"></path>
+    <path d="M291,268L396,357L464,210Z"></path>
+    <path d="M360,416L383,548L444,420Z"></path>
+    <path d="M383,548L366,582L452,626Z"></path>
+    <path d="M307,13L426,97L457,-30Z"></path>
+    <path d="M328,974L419,1016L463,937Z"></path>
+    <path d="M444,183L291,268L464,210Z"></path>
+    <path d="M291,268L330,345L396,357Z"></path>
+    <path d="M375,869L328,974L463,937Z"></path>
+    <path d="M366,582L450,696L452,626Z"></path>
+    <path d="M423,-83L307,13L457,-30Z"></path>
+    <path d="M290,677L419,741L450,696Z"></path>
+    <path d="M366,582L290,677L450,696Z"></path>
+    <path d="M319,916L328,974L375,869Z"></path>
+    <path d="M426,97L306,138L444,183Z"></path>
+    <path d="M319,753L375,869L419,741Z"></path>
+    <path d="M396,357L360,416L444,420Z"></path>
+    <path d="M306,138L291,268L444,183Z"></path>
+    <path d="M328,974L348,1024L419,1016Z"></path>
+    <path d="M290,677L319,753L419,741Z"></path>
+    <path d="M324,-119L307,13L423,-83Z"></path>
+    <path d="M307,13L304,88L426,97Z"></path>
+    <path d="M304,88L306,138L426,97Z"></path>
+    <path d="M360,416L313,543L383,548Z"></path>
+    <path d="M274,634L290,677L366,582Z"></path>
+    <path d="M330,345L360,416L396,357Z"></path>
+    <path d="M187,-104L255,-94L324,-119Z"></path>
+    <path d="M272,410L313,543L360,416Z"></path>
+    <path d="M319,753L254,793L375,869Z"></path>
+    <path d="M313,543L366,582L383,548Z"></path>
+    <path d="M255,-94L307,13L324,-119Z"></path>
+    <path d="M254,793L319,916L375,869Z"></path>
+    <path d="M330,345L272,410L360,416Z"></path>
+    <path d="M313,543L274,634L366,582Z"></path>
+    <path d="M233,172L291,268L306,138Z"></path>
+    <path d="M254,793L225,896L319,916Z"></path>
+    <path d="M291,268L262,306L330,345Z"></path>
+    <path d="M328,974L252,1072L348,1024Z"></path>
+    <path d="M272,410L214,549L313,543Z"></path>
+    <path d="M290,677L265,711L319,753Z"></path>
+    <path d="M319,916L207,935L328,974Z"></path>
+    <path d="M207,935L252,1072L328,974Z"></path>
+    <path d="M262,306L272,410L330,345Z"></path>
+    <path d="M255,-94L206,-13L307,13Z"></path>
+    <path d="M233,172L224,257L291,268Z"></path>
+    <path d="M220,68L304,88L307,13Z"></path>
+    <path d="M214,549L274,634L313,543Z"></path>
+    <path d="M265,711L254,793L319,753Z"></path>
+    <path d="M225,896L207,935L319,916Z"></path>
+    <path d="M304,88L220,68L306,138Z"></path>
+    <path d="M220,68L233,172L306,138Z"></path>
+    <path d="M206,-13L220,68L307,13Z"></path>
+    <path d="M262,306L177,381L272,410Z"></path>
+    <path d="M214,549L189,586L274,634Z"></path>
+    <path d="M224,257L262,306L291,268Z"></path>
+    <path d="M177,381L214,549L272,410Z"></path>
+    <path d="M274,634L265,711L290,677Z"></path>
+    <path d="M183,-55L206,-13L255,-94Z"></path>
+    <path d="M143,671L265,711L274,634Z"></path>
+    <path d="M189,586L143,671L274,634Z"></path>
+    <path d="M132,778L254,793L265,711Z"></path>
+    <path d="M135,945L131,1088L207,935Z"></path>
+    <path d="M207,935L131,1088L252,1072Z"></path>
+    <path d="M143,671L132,778L265,711Z"></path>
+    <path d="M132,778L225,896L254,793Z"></path>
+    <path d="M224,257L177,381L262,306Z"></path>
+    <path d="M177,381L123,546L214,549Z"></path>
+    <path d="M134,346L177,381L224,257Z"></path>
+    <path d="M187,-104L183,-55L255,-94Z"></path>
+    <path d="M87,401L123,546L177,381Z"></path>
+    <path d="M206,-13L167,19L220,68Z"></path>
+    <path d="M132,778L124,913L225,896Z"></path>
+    <path d="M220,68L116,147L233,172Z"></path>
+    <path d="M116,147L136,202L233,172Z"></path>
+    <path d="M136,202L224,257L233,172Z"></path>
+    <path d="M95,255L134,346L224,257Z"></path>
+    <path d="M124,913L207,935L225,896Z"></path>
+    <path d="M136,202L95,255L224,257Z"></path>
+    <path d="M167,19L116,147L220,68Z"></path>
+    <path d="M123,546L189,586L214,549Z"></path>
+    <path d="M124,913L135,945L207,935Z"></path>
+    <path d="M69,79L116,147L167,19Z"></path>
+    <path d="M183,-55L167,19L206,-13Z"></path>
+    <path d="M95,255L94,326L134,346Z"></path>
+    <path d="M62,1036L131,1088L135,945Z"></path>
+    <path d="M75,-9L167,19L183,-55Z"></path>
+    <path d="M92,-140L183,-55L187,-104Z"></path>
+    <path d="M123,546L143,671L189,586Z"></path>
+    <path d="M87,401L87,542L123,546Z"></path>
+    <path d="M100,910L124,913L132,778Z"></path>
+    <path d="M123,546L68,575L143,671Z"></path>
+    <path d="M92,-140L75,-9L183,-55Z"></path>
+    <path d="M134,346L87,401L177,381Z"></path>
+    <path d="M68,575L72,669L143,671Z"></path>
+    <path d="M55,755L132,778L143,671Z"></path>
+    <path d="M72,669L55,755L143,671Z"></path>
+    <path d="M75,-9L69,79L167,19Z"></path>
+    <path d="M55,755L100,910L132,778Z"></path>
+    <path d="M98,937L62,1036L135,945Z"></path>
+    <path d="M2,441L87,542L87,401Z"></path>
+    <path d="M55,755L9,767L100,910Z"></path>
+    <path d="M62,1036L-31,1085L131,1088Z"></path>
+    <path d="M94,326L87,401L134,346Z"></path>
+    <path d="M124,913L98,937L135,945Z"></path>
+    <path d="M116,147L68,156L136,202Z"></path>
+    <path d="M68,156L95,255L136,202Z"></path>
+    <path d="M87,542L68,575L123,546Z"></path>
+    <path d="M69,79L68,156L116,147Z"></path>
+    <path d="M100,910L98,937L124,913Z"></path>
+    <path d="M-23,-61L75,-9L92,-140Z"></path>
+    <path d="M2,441L-10,535L87,542Z"></path>
+    <path d="M-2,-153L-23,-61L92,-140Z"></path>
+    <path d="M68,156L-10,149L95,255Z"></path>
+    <path d="M-10,149L-36,277L95,255Z"></path>
+    <path d="M-36,277L94,326L95,255Z"></path>
+    <path d="M-18,957L62,1036L98,937Z"></path>
+    <path d="M9,767L-70,874L100,910Z"></path>
+    <path d="M-18,957L98,937L100,910Z"></path>
+    <path d="M-70,874L-18,957L100,910Z"></path>
+    <path d="M-52,313L2,441L87,401Z"></path>
+    <path d="M-52,313L87,401L94,326Z"></path>
+    <path d="M-36,277L-52,313L94,326Z"></path>
+    <path d="M68,575L-12,690L72,669Z"></path>
+    <path d="M-12,690L55,755L72,669Z"></path>
+    <path d="M-10,535L68,575L87,542Z"></path>
+    <path d="M-19,104L-10,149L68,156Z"></path>
+    <path d="M-35,565L-12,690L68,575Z"></path>
+    <path d="M-19,104L68,156L69,79Z"></path>
+    <path d="M-19,104L69,79L75,-9Z"></path>
+    <path d="M-23,-61L-19,104L75,-9Z"></path>
+    <path d="M-12,690L9,767L55,755Z"></path>
+    <path d="M-10,535L-35,565L68,575Z"></path>
+    <path d="M-52,313L-77,380L2,441Z"></path>
+    <path d="M-18,957L-31,1085L62,1036Z"></path>
+    <path d="M-81,-47L-151,53L-19,104Z"></path>
+    <path d="M-23,-61L-81,-47L-19,104Z"></path>
+    <path d="M-35,565L-108,661L-12,690Z"></path>
+    <path d="M-90,152L-36,277L-10,149Z"></path>
+    <path d="M-77,499L-10,535L2,441Z"></path>
+    <path d="M-12,690L-149,797L9,767Z"></path>
+    <path d="M-149,797L-70,874L9,767Z"></path>
+    <path d="M-152,984L-157,1034L-31,1085Z"></path>
+    <path d="M-152,984L-31,1085L-18,957Z"></path>
+    <path d="M-108,661L-149,797L-12,690Z"></path>
+    <path d="M-81,-47L-23,-61L-2,-153Z"></path>
+    <path d="M-77,380L-77,499L2,441Z"></path>
+    <path d="M-149,797L-107,867L-70,874Z"></path>
+    <path d="M-164,-96L-81,-47L-2,-153Z"></path>
+    <path d="M-77,499L-35,565L-10,535Z"></path>
+    <path d="M-19,104L-90,152L-10,149Z"></path>
+    <path d="M-90,152L-114,285L-36,277Z"></path>
+    <path d="M-151,53L-90,152L-19,104Z"></path>
+    <path d="M-70,874L-152,984L-18,957Z"></path>
+    <path d="M-161,608L-108,661L-35,565Z"></path>
+    <path d="M-107,867L-152,984L-70,874Z"></path>
+    <path d="M-77,499L-161,608L-35,565Z"></path>
+    <path d="M-114,285L-52,313L-36,277Z"></path>
+    <path d="M-118,325L-77,380L-52,313Z"></path>
+    <path d="M-114,285L-118,325L-52,313Z"></path>
+    <path d="M-118,325L-77,499L-77,380Z"></path>
+    <path d="M-164,-96L-151,53L-81,-47Z"></path>
+    <path d="M-118,325L-161,608L-77,499Z"></path>
+    <path d="M-151,53L-114,285L-90,152Z"></path>
+    <path d="M-161,608L-149,797L-108,661Z"></path>
+    <path d="M-149,797L-152,984L-107,867Z"></path>
+    <path d="M-151,53L-118,325L-114,285Z"></path>
+    <path d="M-151,53L-161,608L-118,325Z"></path>
+    <path d="M-164,-96L-161,608L-151,53Z"></path>
+    <path d="M-157,1034L-152,984L-149,797Z"></path>
+    <path d="M-161,608L-157,1034L-149,797Z"></path>
+  </svg>
+</div>
+  <div class="header-in">
+    <a href="/">
+      <img src="/assets/images/author.jpg" alt="author thumb" class="dot author-thumb">
+    </a>
+    <h1>More coffee, less war!</h1>
+    <nav class="nav" role="navigation">
+      <ul class="navbar" role="menu">
+        <li role="menuitem"><a href="/blog" class="after">Blog</a></li>
+        <li role="menuitem"><a href="/about" class="after">Sobre</a></li>
+        <li role="menuitem"><a href="http://nandomoreira.me/portfolio" class="after">Projetos</a></li>
+        <li role="menuitem"><a href="/contato" class="after">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <main class="wrapper" role="main" itemprop="mainContentOfPage">
+      <article role="article" class="post" itemprop="articleBody">
+<header class="post-header">
+  <h1 class="post-title">10 dicas de otimização em programação PHP</h1>
+  <div class="post-meta">
+    <time datetime="2011-11-03T12:27:00+00:00" itemprop="datePublished">
+      <meta itemprop="datePublished" content="2011-11-03T12:27:00+00:00"> November 03, 2011
+    </time>
+    <span> |
+      Categoria: <a href="/categoria/php/">PHP</a>
+    </span>
+  </div>
+</header>
+<div class="post-content">
+  <p><strong>1</strong> - Usar <code>echo</code> ao invés de <code>print</code>.</p>
+<p><strong>2</strong> - Usar argumentos no echo ao invés de concatenar. Ex.:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="k">echo</span> <span class="s1">&#39;Meu programa &#39;</span><span class="p">,</span><span class="nv">$nome</span><span class="p">,</span><span class="s1">&#39; funciona perfeitamente.&#39;</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
+<p><strong>3</strong> - Prefira sempre usar aspas simples (‘) ao invés de aspas duplas (“), pois quando se usa aspas simples o PHP trata como uma string literal, ou seja, não vai interpretá-la. Portanto, se não precisar, não use aspas duplas. Ex.:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$registros</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="k">echo</span> <span class="s1">&#39;Total de $registros&#39;</span><span class="p">;</span>
+<span class="c1">// resultado: Total de $registros</span>
+<span class="k">echo</span> <span class="s2">&quot;Total de </span><span class="si">$registros</span><span class="s2">&quot;</span><span class="p">;</span>
+<span class="c1">// resultado: Total de 100</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
+<p><strong>4</strong> - Use <code>require</code> ao invés de <code>require_once</code>.</p>
+<p><strong>5</strong> - Evite de usar <code>@</code> antes das variáveis ou outros lugares para suprimir as mensagens de erros.</p>
+<p><strong>6</strong> - Em array, <code>$linha['id']</code> é até 7 vezes mais rápido do que <code>$linha[id]</code>.</p>
+<p><strong>7</strong> - Evite de usar <code>for($i=0; $i &amp;lt; count($_linhas); $i++</code>. Use:</p>
+<div class="highlight"><pre><code class="language-php" data-lang="php"><span class="cp">&lt;?php</span>
+<span class="nv">$total</span> <span class="o">=</span> <span class="nb">count</span><span class="p">(</span><span class="nv">$_linhas</span><span class="p">);</span>
+<span class="k">for</span><span class="p">(</span><span class="nv">$i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">&lt;</span> <span class="nv">$total</span><span class="p">;</span> <span class="nv">$i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="p">}</span>
+<span class="cp">?&gt;</span><span class="x"></span></code></pre></div>
+<p>Pois o <code>for</code> sempre irá executar a função count, pesando na velocidade do seu programa.</p>
+<p><strong>8</strong> - Habilite o <code>mod_deflate</code> do apache, você poderá ganhar consumo de banda, ou seja, ele vai comprimir os dados para ser enviado para o cliente (navegador). Dependendo da página, poderá ter uma compressão perto dos 90%. Assim sendo, economia de banda, e carregamento mais rápido para o cliente.</p>
+<p><strong>9</strong> - Prefira sempre usar HTML se não tiver nada de dinâmico na sua página, pois scripts PHP podem ser de 2-10 vezes mais lento.</p>
+<p><strong>10</strong> - Com uso de banco de dados, também prefira por usar cache de objetos ou resultados, se está tendo muitas consultas no Banco de Dados, pode ser que uma hora o seu banco de dados não suporte muitas requisições simultâneas, então com cache poderá diminuir em muito estas requisições e assim melhorando a velocidade de respostas. Procure por <code>memcache</code>, este é bom para isso.</p>
+<p><small>Fonte: <a href="http://www.vivaolinux.com.br/" target="_blank">http://www.vivaolinux.com.br</a></small></p>
+</div>
+<footer class="post-footer">
+  <div class="container">
+    <section class="author">
+      <img src="/assets/images/author.jpg" alt="author thumb" class="dot author-thumb">
+      <h4>Fernando Moreira</h4>
+      <p>Desenvolvedor Front-end entusiasta de performance, design responsivo e usabilidade, sempre em busca do melhor projeto e de um bom café.</p>
+    </section>
+<aside class="share">
+  <h4>Compartilhe.</h4>
+  <a class="share-twitter" href="http://twitter.com/share?text=10 dicas de otimização em programação PHP&amp;url=http://nandomoreira.me/10-dicas-de-otimizacao-em-programacao-php/&amp;hashtags=web,dev,blog,soudev&amp;via=nandomoreirame"
+  onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+    <i class="icon icon-twitter"></i>
+  </a>
+  <a class="share-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://nandomoreira.me/10-dicas-de-otimizacao-em-programacao-php/"
+  onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+    <i class="icon icon-facebook"></i>
+  </a>
+</aside>
+  </div>
+</footer>
+    <aside id="comments" class="disqus">
+  <hr>
+  <div class="txt-center">
+    <h3><i class="icon icon-comments"></i> Comentários</h3>
+    <a href="#" class="show-disqus disqus-hidden txt-center">Deixe seu comentário</a>
+  </div>
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'http://nandomoreira.me';  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = '/10-dicas-de-otimizacao-em-programacao-php'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    // (function() {
+    //   var d = document, s = d.createElement('script');
+    //   s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    //   s.setAttribute('data-timestamp', +new Date());
+    //   (d.head || d.body).appendChild(s);
+    // })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</aside>
+</article>
+    </main>
+<footer class="footer">
+  <ul class="social">
+  <li>
+    <a href="http://github.com/nandomoreirame"target="_blank">
+      <i class="icon icon-github"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://twitter.com/nandomoreirame" target="_blank">
+      <i class="icon icon-twitter"></i>
+    </a>
+  </li>
+  <li>
+    <a href="http://linkedin.com/in/nandomoreirame" target="_blank">
+      <i class="icon icon-linkedin"></i>
+    </a>
+  </li>
+  <li>
+    <a href="/feed.xml" target="_blank"><i class="icon icon-feed"></i></a>
+  </li>
+</ul>
+  <span>
+    Feito com <a href="http://jekyllrb.com" target="_blank">Jekyll</a> • <a href="http://github.com/nandomoreirame/nandomoreirame.github.io" target="_blank">Open source <i class="icon icon-heart"></i></a>
+  </span>
+</footer>
+<div id="modalSearch" class="modal-search" ng-app="searchApp">
+  <div class="modal-search-overlay"></div>
+  <div class="modal-search-content">
+    <div class="modal-search-container" ng-controller="searchController">
+      <div class="form-group">
+        <input type="text" class="modal-search-input" ng-keyup="pesquisar(search)" ng-model="search" placeholder="sass, javascript, ruby, gulp..." autocomplete="off">
+        <i class="icon icon-search"></i>
+      </div>
+      <ul class="search-results" ng-show="posts.length > 0">
+        <li ng-repeat="post in posts | filter:search" class="fade">
+          <a href="{( post.url )}">
+            <span>{( post.title )}</span> <small>{( post.category )}</small>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+    <script src="/assets/main-7f0d43f79792220343fc5ac0514b524f.js"></script>
+  </body>
+</html>
